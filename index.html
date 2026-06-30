@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRC Team 5036  The Robo Devils</title>
+  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js" defer></script>
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav id="mainNav">
+    <a class="nav-brand" href="#hero">
+      <img class="nav-logo-svg" src="assets/logo.png" alt="Robo Devils logo" />
+      <div class="nav-name">ROBO<span>DEVILS</span></div>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <div class="mobile-menu-inner">
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#highlights" class="mobile-nav-link">Highlights</a>
+      <a href="#gallery" class="mobile-nav-link">Gallery</a>
+      <a href="#awards" class="mobile-nav-link">Awards</a>
+      <a href="#community" class="mobile-nav-link">Community</a>
+      <a href="#sponsors" class="mobile-nav-link">Sponsors</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+      <div class="mobile-menu-divider"></div>
+      <div class="mobile-menu-socials">
+        <a href="https://www.instagram.com/frc5036/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://team5036.ca" target="_blank" rel="noopener">Website</a>
+        <a href="https://github.com/team-5036-the-robodevils" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="mobile-tag">FRC Team 5036  Scarborough, ON</p>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 14V4M4 8l5-5 5 5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="hero">
+    <div class="hero-glow-l"></div>
+    <div class="hero-glow-r"></div>
+    <div class="hero-inner">
+      <div>
+        <h1 class="hero-title">ROBO<br><span class="outlined">DEVILS</span></h1>
+        <p class="hero-sub">FRC Team 5036 is a student led robotics team from SWLCI in Toronto competing in the FIRST Robotics Competition, where we design, build, and program competitive robots while developing real world skills in engineering, leadership, business, and outreach, and we welcome sponsors who want to support hands on STEM education and student innovation.</p>
+        <div class="hero-cta-row">
+          <a href="#highlights" class="btn-primary">Our Achievements</a>
+          <a href="#contact" class="btn-secondary">Get Involved</a>
+        </div>
+      </div>
+      <div class="hero-logo-block">
+        <img class="hero-logo-svg" src="assets/logo.png" alt="Robo Devils Team 5036 Logo" />
+      </div>
+    </div>
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span class="ticker-item"><span class="dot"></span> 12 Seasons of Competition</span>
+        <span class="ticker-item"><span class="dot"></span> 3 FIRST Championship Qualifier</span>
+        <span class="ticker-item"><span class="dot"></span> Event Champions 2022</span>
+        <span class="ticker-item"><span class="dot"></span> Creativity Award  Rockwell Automation</span>
+        <span class="ticker-item"><span class="dot"></span> FIRST Canada  Ontario District</span>
+        <span class="ticker-item"><span class="dot"></span> Alliance Captain  2017, 2022, 2025</span>
+        <span class="ticker-item"><span class="dot"></span> 12 Seasons of Competition</span>
+        <span class="ticker-item"><span class="dot"></span> 3 FIRST Championship Qualifier</span>
+        <span class="ticker-item"><span class="dot"></span> Event Champions 2022</span>
+        <span class="ticker-item"><span class="dot"></span> Creativity Award  Rockwell Automation</span>
+        <span class="ticker-item"><span class="dot"></span> FIRST Canada  Ontario District</span>
+        <span class="ticker-item"><span class="dot"></span> Alliance Captain  2017, 2022, 2025</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-carousel carousel-container" aria-label="About image carousel">
+            <button class="carousel-button prev" type="button" aria-label="Previous slide">‹</button>
+            <div class="carousel-track-container">
+              <div class="carousel-track">
+                <div class="carousel-slide">
+                  <img class="about-img"
+                    src="assets/about1.jpg"
+                    alt="About slide 1"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                  />
+                </div>
+                <div class="carousel-slide">
+                  <img class="about-img"
+                    src="assets/about2.jpg"
+                    alt="About slide 2"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                  />
+                </div>
+                <div class="carousel-slide">
+                  <img class="about-img"
+                    src="assets/about3.jpg"
+                    alt="About slide 3"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                  />
+                </div>
+                <div class="carousel-slide">
+                  <img class="about-img"
+                    src="assets/about4.jpg"
+                    alt="About slide 4"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                  />
+                </div>
+                <div class="carousel-slide">
+                  <img class="about-img"
+                    src="assets/about5.jpg"
+                    alt="About slide 5"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="carousel-button next" type="button" aria-label="Next slide">›</button>
+            <div class="carousel-dots" aria-label="About slide navigation"></div>
+          </div>
+          <div class="about-badge">EST.<br>2014</div>
+        </div>
+        <div class="about-text">
+          <p class="eyebrow">Who We Are</p>
+          <h2 class="section-title">More than<br> robotics.</h2>
+          <p>Team 5036, <strong> the Robo Devils</strong>, are a passionate group of high school students from Sir Wilfrid Laurier Collegiate Institute</strong> in Scarborough, Ontario, competing in the FIRST Robotics Competition since 2014.</p>
+          <p>Every season, we have just six weeks to design, build, program, and test a competition ready robot, an experience built on real engineering, real teamwork, and real grit.</p>
+          <p>But what we build goes beyond machines. Community is at the core of everything we do. Through mentoring younger students, running STEM workshops, and building strong connections across Scarborough Village, we work to make engineering more accessible and inspire the next generation.</p>
+          <div class="about-pills">
+            <span class="pill">Mechanical</span>
+            <span class="pill">Programming</span>
+            <span class="pill">Design</span>
+            <span class="pill">Strategy</span>
+            <span class="pill">Outreach</span>
+            <span class="pill">Business</span>
+            <span class="pill">Media</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HIGHLIGHTS ===== -->
+  <section id="highlights">
+    <div class="section-inner">
+      <p class="eyebrow light">Highlights</p>
+      <h2 class="section-title light">"Built to compete"</h2>
+      <div class="highlight-cards">
+        <div class="hcard">
+          <video class="hcard-video" autoplay muted loop playsinline>
+            <source src="assets/hi2.mp4" type="video/mp4" />
+          </video>
+          <div class="hcard-label">2026 Season Highlight</div>
+          <div class="hcard-desc">Our top scoring match of the season</div>
+        </div>
+        <div class="hcard">
+          <div class="hcard-num">3x</div>
+          <div class="hcard-label">Championship Qualifier</div>
+          <div class="hcard-desc">Qualified for the prestigious FIRST Championship three times  joining the top teams in the world on the biggest stage in FRC.</div>
+        </div>
+        <div class="hcard">
+          <div class="hcard-num">1x</div>
+          <div class="hcard-label">Event Champions</div>
+          <div class="hcard-desc">Won the ON204 District Event in 2022 with our robot <em>Orion</em>. One of the proudest moments in team history.</div>
+        </div>
+        <div class="hcard">
+          <div class="hcard-num">7</div>
+          <div class="hcard-label">Total Awards</div>
+          <div class="hcard-desc">Including the Creativity Award sponsored by Rockwell Automation and recognition across 12 seasons in the Ontario District.</div>
+        </div>
+        <div class="hcard">
+          <div class="hcard-num">3x</div>
+          <div class="hcard-label">Alliance Captain</div>
+          <div class="hcard-desc">Earned Alliance Captain status in 2017, 2022, and 2025 through strong performance and reliable play across the event.</div>
+        </div>
+        <div class="hcard">
+          <div class="hcard-num">12</div>
+          <div class="hcard-label">Seasons Competed</div>
+          <div class="hcard-desc">Rookie year 2014, still competing strong. Over 38 events with playoff appearances across nearly every season.</div>
+        </div>
+        <div class="hcard wide">
+          <div>
+            <div class="hcard-num">#18</div>
+            <div class="hcard-label">Ontario District  2017</div>
+          </div>
+          <div>
+            <div class="hcard-desc">Our best-ever district ranking  <strong style="color:white">Top 20 in all of Ontario</strong> with 180 district points. We served as Alliance Captain at multiple events and reached the Semifinals, proving we belong among the province's best.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery">
+    <div class="section-inner">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-carousel" aria-label="Gallery carousel">
+        <button class="carousel-button prev" type="button" aria-label="Previous slide">‹</button>
+        <div class="carousel-track-container">
+          <div class="carousel-track"></div>
+        </div>
+        <button class="carousel-button next" type="button" aria-label="Next slide">›</button>
+        <div class="carousel-dots" aria-label="Gallery slide navigation"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox-overlay" id="galleryLightbox" aria-hidden="true">
+    <div class="lightbox-content" role="dialog" aria-modal="true">
+      <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+      <img id="lightboxImage" alt="" src="" />
+    </div>
+  </div>
+
+  <!-- ===== AWARDS ===== -->
+  <section id="awards">
+    <div class="section-inner">
+      <p class="eyebrow">Recognition</p>
+      <h2 class="section-title">Awards &amp;<br>Achievements</h2>
+      <div class="awards-grid">
+        <div class="award-card featured">
+          <div class="award-trophy">[P.H]</div>
+          <div>
+            <div class="award-title">Event Champions  2022</div>
+            <div class="award-detail">ON204 District Event  Robot: Orion  Our first and proudest event championship win</div>
+          </div>
+        </div>
+        <div class="award-card">
+          <div class="award-trophy">[P.H]</div>
+          <div>
+            <div class="award-title">Creativity Award</div>
+            <div class="award-detail">Sponsored by Rockwell Automation<br>ONT District North Bay Event</div>
+          </div>
+        </div>
+        <div class="award-card">
+          <div class="award-trophy">[P.H]</div>
+          <div>
+            <div class="award-title">3 FIRST Championship</div>
+            <div class="award-detail">Qualified for and competed at the FIRST Championship three times  the pinnacle of FRC competition worldwide</div>
+          </div>
+        </div>
+        <div class="award-card">
+          <div class="award-trophy">[P.H]</div>
+          <div>
+            <div class="award-title">Ontario Top 20  2017</div>
+            <div class="award-detail">Ranked #18 in all of Ontario with 180 district points  best-ever district performance</div>
+          </div>
+        </div>
+        <div class="award-card">
+          <div class="award-trophy">[P.H]</div>
+          <div>
+            <div class="award-title">Alliance Captain  3 Seasons</div>
+            <div class="award-detail">Earned Alliance Captain status in 2017, 2022, and 2025 through strong play and consistent event performance.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROBOTS ===== -->
+  <section id="robots">
+    <div class="section-inner">
+      <p class="eyebrow">Our Machines</p>
+      <h2 class="section-title">The Robots</h2>
+      <div class="robots-list">
+        <div class="robot-card">
+          <div class="robot-year">2026</div>
+          <div class="robot-name">Pacman</div>
+          <div class="robot-note">Pacman led the 2026 season with strong field control and helped the team earn the North Bay Creativity Award.</div>
+        </div>
+        <div class="robot-card">
+          <div class="robot-year">2025</div>
+          <div class="robot-name">Hydra</div>
+          <div class="robot-note">Hydra powered the 2025 campaign and helped Team 5036 serve as Alliance Captain at the Centennial College event.</div>
+        </div>
+        <div class="robot-card">
+          <div class="robot-year">2024</div>
+          <div class="robot-name">ZTDT</div>
+          <div class="robot-note">ZTDT delivered consistent scoring through the 2024 Ontario district season and showed strong reliability across events.</div>
+        </div>
+        <div class="robot-card">
+          <div class="robot-year">2023</div>
+          <div class="robot-name">Mickey</div>
+          <div class="robot-note">Mickey brought speed and agility to the hotshot season, helping the team execute tight game strategy.</div>
+        </div>
+        <div class="robot-card">
+          <div class="robot-year">2022</div>
+          <div class="robot-name">Orion</div>
+          <div class="robot-note">Orion won the ON204 district event in 2022 and earned the team a district event championship.</div>
+        </div>
+        <div class="robot-card">
+          <div class="robot-year">2020</div>
+          <div class="robot-name">Chester</div>
+          <div class="robot-note">Chester was built and competition-ready for 2020, representing the team’s resilience in a season cut short by the pandemic.</div>
+        </div>
+        <div class="robot-card">
+          <div class="robot-year">2019</div>
+          <div class="robot-name">Dementor II</div>
+          <div class="robot-note">Dementor powered the team into winning the creativity award during the 2019 season.</div>
+        </div>
+        <div class="robot-card">
+          <div class="robot-year">2018</div>
+          <div class="robot-name">Dementor</div>
+          <div class="robot-note">Built for POWER UP, Dementor helped the team qualify for the Detroit Championship in 2018.</div>
+        </div>
+        <div class="robot-card">
+          <div class="robot-year">2017</div>
+          <div class="robot-name">Turtle</div>
+          <div class="robot-note">Turtle anchored the team’s best-ever Ontario ranking and helped earn Alliance Captain honors that season.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMUNITY ===== -->
+   
+  <section id="community">
+    <div class="section-inner">
+      <p class="eyebrow light">Beyond the Field</p>
+      <h2 class="section-title light">Built for<br>community.</h2>
+      <div class="community-grid">
+        <div class="comm-card">
+          <div class="comm-icon">[P.H]</div>
+          <div class="comm-title">Student Mentorship</div>
+          <div class="comm-desc">We mentor younger students in Scarborough Village, helping them discover robotics and STEM before high school.</div>
+        </div>
+        <div class="comm-card">
+          <div class="comm-icon">[P.H]</div>
+          <div class="comm-title">STEM Workshops</div>
+          <div class="comm-desc">We host hands-on workshops giving students and families access to real engineering and programming experiences.</div>
+        </div>
+        <div class="comm-card">
+          <div class="comm-icon">[P.H]</div>
+          <div class="comm-title">Local Events</div>
+          <div class="comm-desc">From school nights to community fairs  we show up to inspire the next generation of engineers and problem-solvers.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPONSORS ===== -->
+  <section id="sponsors">
+    <div class="section-inner">
+      <p class="eyebrow">Our Supporters</p>
+      <h2 class="section-title">Backed by<br>the best.</h2>
+      <p class="sponsor-blurb">Competing as a FIRST Robotics team costs approximately $20,000 every season. Our sponsors make it possible for us to compete at the highest level.</p>
+      <div class="sponsor-grid">
+        <div class="sponsor-tile"><div class="sponsor-tile-icon">[P.H]</div><div class="sponsor-tile-name">TDSB<br>Toronto District School Board</div></div>
+        <div class="sponsor-tile"><div class="sponsor-tile-icon">[P.H]</div><div class="sponsor-tile-name">Honda Canada Foundation</div></div>
+        <div class="sponsor-tile"><div class="sponsor-tile-icon">[P.H]</div><div class="sponsor-tile-name">DOW Chemical</div></div>
+        <div class="sponsor-tile"><div class="sponsor-tile-icon">[P.H]</div><div class="sponsor-tile-name">ACE Climatic Wind Tunnel</div></div>
+        <div class="sponsor-tile"><div class="sponsor-tile-icon">[P.H]</div><div class="sponsor-tile-name">Intuitive Foundation</div></div>
+        <div class="sponsor-tile"><div class="sponsor-tile-icon">[P.H]</div><div class="sponsor-tile-name">Sable Metal</div></div>
+        <div class="sponsor-tile"><div class="sponsor-tile-icon">[P.H]</div><div class="sponsor-tile-name">Molex</div></div>
+        <div class="sponsor-tile"><div class="sponsor-tile-icon">[P.H]</div><div class="sponsor-tile-name">Argosy Foundation</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div>
+        <h2 class="contact-title">Let's<br>Connect.</h2>
+        <p class="contact-sub">Explore our resources below to learn more, and use the email or Instagram link to contact us directly.</p>
+      </div>
+      <div class="contact-links">
+        <a class="contact-link" href="https://www.instagram.com/frc5036/" target="_blank" rel="noopener">
+          <span class="iconify link-icon" data-icon="mdi:instagram" data-inline="false"></span>
+          Instagram  @frc5036
+        </a>
+        <a class="contact-link" href="mailto:asikaajessica@gmail.com" target="_blank" rel="noopener">
+          <span class="iconify link-icon" data-icon="mdi:email" data-inline="false"></span>
+          Email
+        </a>
+        <a class="contact-link" href="https://www.thebluealliance.com/team/5036" target="_blank" rel="noopener">
+          <img class="link-icon" src="assets/tba_lamp.svg" alt="The Blue Alliance lamp icon" width="18" height="18" />
+          The Blue Alliance  Stats &amp; Results
+        </a>
+        <a class="contact-link" href="https://github.com/team-5036-the-robodevils" target="_blank" rel="noopener">
+          <svg class="link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77a5.07 5.07 0 0 0-.14-3.54s-1.11-.36-3.64 1.37a12.41 12.41 0 0 0-6.62 0C6.35 1.87 5.24 2.23 5.24 2.23A5.07 5.07 0 0 0 5.1 5.77a5.44 5.44 0 0 0-1.45 3.77c0 5.42 3.29 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>
+          GitHub  Robot Code
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-brand">
+      <img class="footer-logo-svg" src="assets/logo.png" alt="Robo Devils logo" />
+      <div class="footer-name">ROBO<span>DEVILS</span>  FRC 5036</div>
+    </div>
+    <div class="footer-note">Sir Wilfrid Laurier Collegiate Institute  Scarborough, Ontario</div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
+
