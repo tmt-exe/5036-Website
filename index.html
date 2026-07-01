@@ -32,17 +32,36 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <!-- Hamburger -->
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div class="nav-actions">
+      <div class="accessibility-menu">
+        <button class="accessibility-toggle" id="accessibilityToggle" type="button" aria-label="Open accessibility options" aria-expanded="false" aria-controls="accessibilityDropdown">
+          <span class="iconify" data-icon="mdi:accessibility" data-inline="false" aria-hidden="true"></span>
+        </button>
+        <div class="accessibility-dropdown" id="accessibilityDropdown" role="menu">
+          <button class="dropdown-option" id="reducedMotionToggle" type="button" aria-pressed="false" role="menuitem">
+            <span class="dropdown-label">Reduced<br>motion</span>
+            <span class="toggle-indicator"></span>
+          </button>
+          <button class="dropdown-option" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false" role="menuitem">
+            <span class="dropdown-label">Dark<br>mode</span>
+            <span class="toggle-indicator"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- Mobile Menu Drawer -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
     <div class="mobile-menu-inner">
+      <button class="mobile-close" id="mobileClose" type="button" aria-label="Close menu">×</button>
       <a href="#about" class="mobile-nav-link">About</a>
       <a href="#highlights" class="mobile-nav-link">Highlights</a>
       <a href="#gallery" class="mobile-nav-link">Gallery</a>
@@ -62,9 +81,7 @@
 
   <!-- Back to top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M9 14V4M4 8l5-5 5 5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+    <span class="iconify" data-icon="mdi:arrow-up" data-inline="false" aria-hidden="true"></span>
   </button>
 
   <!-- ===== HERO ===== -->

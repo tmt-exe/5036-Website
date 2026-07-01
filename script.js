@@ -3,10 +3,16 @@
 // -- DOM references and shared state
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
 const body = document.body;
 const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 const progressBar = document.getElementById('progressBar');
 const backToTop = document.getElementById('backToTop');
+const accessibilityToggle = document.getElementById('accessibilityToggle');
+const accessibilityMenu = document.querySelector('.accessibility-menu');
+const reducedMotionToggle = document.getElementById('reducedMotionToggle');
+const themeToggle = document.getElementById('themeToggle');
+const prefersReducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 const lightboxOverlay = document.getElementById('galleryLightbox');
 const lightboxImage = document.getElementById('lightboxImage');
 const sections = Array.from(document.querySelectorAll('section[id], header[id]'));
@@ -29,14 +35,40 @@ function closeMenu() {
   hamburger.setAttribute('aria-expanded', 'false');
 }
 
+function closeAccessibilityMenu() {
+  accessibilityMenu?.classList.remove('open');
+  accessibilityToggle?.setAttribute('aria-expanded', 'false');
+}
+
 hamburger.addEventListener('click', () => {
   hamburger.classList.contains('open') ? closeMenu() : openMenu();
 });
 
+mobileClose?.addEventListener('click', closeMenu);
 mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeMenu();
+  if (e.key === 'Escape') {
+    closeMenu();
+    closeAccessibilityMenu();
+  }
+});
+
+accessibilityToggle?.addEventListener('click', event => {
+  event.stopPropagation();
+  const isOpen = accessibilityMenu?.classList.contains('open');
+  if (isOpen) {
+    closeAccessibilityMenu();
+  } else {
+    accessibilityMenu?.classList.add('open');
+    accessibilityToggle?.setAttribute('aria-expanded', 'true');
+  }
+});
+
+document.addEventListener('click', event => {
+  if (!accessibilityMenu?.contains(event.target)) {
+    closeAccessibilityMenu();
+  }
 });
 
 // Save section positions so the nav link can update while scrolling.
@@ -62,6 +94,54 @@ function updateBackToTop() {
     backToTop.classList.remove('visible');
   }
 }
+
+function setReducedMotion(enabled, persist = true) {
+  body.classList.toggle('reduced-motion', enabled);
+  document.documentElement.classList.toggle('reduced-motion', enabled);
+  reducedMotionToggle?.classList.toggle('active', enabled);
+  reducedMotionToggle?.setAttribute('aria-pressed', String(enabled));
+  if (persist) {
+    localStorage.setItem('reducedMotion', String(enabled));
+  }
+}
+
+function setTheme(mode, persist = true) {
+  const isDark = mode === 'dark';
+  body.classList.toggle('dark', isDark);
+  themeToggle?.classList.toggle('active', isDark);
+  themeToggle?.setAttribute('aria-pressed', String(isDark));
+  if (persist) {
+    localStorage.setItem('theme', mode);
+  }
+}
+
+function initSettings() {
+  const savedReducedMotion = localStorage.getItem('reducedMotion');
+  const savedTheme = localStorage.getItem('theme');
+  const reducedMotionEnabled = savedReducedMotion !== null ? savedReducedMotion === 'true' : prefersReducedMotionQuery.matches;
+  const themeMode = savedTheme || 'light';
+
+  setReducedMotion(reducedMotionEnabled, false);
+  setTheme(themeMode, false);
+}
+
+reducedMotionToggle?.addEventListener('click', () => {
+  const shouldEnableReducedMotion = !body.classList.contains('reduced-motion');
+  setReducedMotion(shouldEnableReducedMotion);
+});
+
+themeToggle?.addEventListener('click', () => {
+  const nextMode = body.classList.contains('dark') ? 'light' : 'dark';
+  setTheme(nextMode);
+});
+
+prefersReducedMotionQuery.addEventListener?.('change', event => {
+  if (localStorage.getItem('reducedMotion') === null) {
+    setReducedMotion(event.matches, false);
+  }
+});
+
+initSettings();
 
 // Open the lightbox with the clicked image.
 function openLightbox(src, alt) {
@@ -103,7 +183,8 @@ document.addEventListener('keydown', event => {
 });
 
 backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollBehavior = document.documentElement.classList.contains('reduced-motion') ? 'auto' : 'smooth';
+  window.scrollTo({ top: 0, behavior: scrollBehavior });
 });
 
 function updateActiveLink() {
