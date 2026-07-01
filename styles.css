@@ -947,6 +947,6 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ticker { animation: none; }
+  .ticker { animation: ticker 30s linear infinite !important; }
   * { transition: none !important; }
 }
